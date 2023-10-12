@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+        integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+        integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="highlightjs/styles/default.min.css">
+    <script src="highlightjs/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+
+    <title>Ars Docendi</title>
+</head>
+
+<body>
+    <header>
+        <span>
+            <a class="title" href="https://home.in.tum.de/~teuj/ars/">Ars docendi</a>
+        </span>
+        <span id="question-number-box">
+            Frage <span id="question-number"></span>
+        </span>
+        <nav>
+            <a href="qr.html">QR-Code</a>
+            <a href="admin.html">Panel</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="question"></section>
+        <section id="inactive" class="notice hidden">
+            <h1>Keine aktiven Fragen</h1>
+            Gerade ist keine Frage aktiv.
+
+            <i>Ars docendi</i> ist ein minimalistisches <i>audience response system</i>.
+        </section>
+        <section id="alreadySubmitted" class="notice hidden">
+            Der Server hat bereits eine Abgabe von Ihnen gespeichert, Sie können kein zweites
+            Mal abgeben.
+        </section>
+        <section id="submissionRejected" class="notice hidden">
+            Der Server hat Ihre Abgabe zurückgewiesen. Möglicherweise ist das eingestellte
+            Speicherplatzlimit überschritten.
+        </section>
+        <section id="success" class="notice hidden">
+            Ihre Abgabe wurde gespeichert.
+        </section>
+        <section id="buttons" class="hidden">
+            <button id="send" onclick="postAnswers()">Abschicken</button>
+            <button id="reload" onclick="renderQuestion()">Neu Laden</button>
+        </section>
+    </main>
+
+    <script src="markdown.js"></script>
+    <script src="lib.js"></script>
+    <script src="index.js"></script>
+
+    <footer>
+        <a href=""><i>Ars docendi</i></a>, an Audience Response System &mdash;
+        Jakob Teuber,
+        version 0.1.
+    </footer>
+
+</body>
+
+</html>

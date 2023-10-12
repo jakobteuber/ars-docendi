@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+        integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+        integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="highlightjs/styles/default.min.css">
+    <script src="highlightjs/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+
+    <title>Ars Docendi</title>
+</head>
+
+<body>
+    <header>
+        <span>
+            <a class="title" href="https://home.in.tum.de/~teuj/ars/">Ars docendi</a>
+        </span>
+        <span id="question-number-box">
+            Frage <span id="question-number"></span>
+        </span>
+        <nav>
+            <a href="qr.html">QR-Code</a>
+            <a href="admin.html">Panel</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="globalStatistics">
+            <span id="correct"></span> richtig / <span id="answerCount"></span> gesamt
+        </section>
+        <section id="question" class="hidden"></section>
+        <section id="setup" class="hidden"></section>
+        <section id="buttons" class="hidden">
+            <button onclick="displaySolutions()">Lösungen</button>
+            <button onclick="nextQuestion()">Weiter</button>
+            <button onclick="reset()">Zurücksetzen</button>
+        </section>
+
+        <script src="markdown.js"></script>
+        <script src="lib.js"></script>
+        <script src="admin.js"></script>
+    </main>
+
+    <footer>
+        <a href=""><i>Ars docendi</i></a>, an Audience Response System &mdash;
+        Jakob Teuber,
+        version 0.1.
+    </footer>
+
+</body>
+
+</html>

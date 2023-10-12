@@ -1,0 +1,7 @@
+<FilesMatch "(admin.js|admin.html|admin_action.cgi|question_sets.cgi|solutions.cgi)">
+    AuthType Basic
+    AuthName "ARS Admin panel — Bitte melden Sie Sich an."
+    AuthBasicProvider file
+    AuthUserFile "/u/halle/teuj/home_page/html-data/ars/.htpasswd"
+    Require user ars-admin
+</FilesMatch>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+
+    <title>Ars Docendi</title>
+</head>
+
+<body>
+    <header>
+        <span>
+            <a class="title" href="https://home.in.tum.de/~teuj/ars/">Ars docendi</a>
+        </span>
+        <span id="question-number-box"></span>
+        <nav>
+            <a href="qr.html">QR-Code</a>
+            <a href="admin.html">Panel</a>
+        </nav>
+    </header>
+
+    <main class="qr-box">
+        <a href="https://home.in.tum.de/~teuj/ars/">https://home.in.tum.de/~teuj/ars/</a>
+
+        <a id="qr-code-link" href="https://home.in.tum.de/~teuj/ars/">
+            <div id="qr-code"></div>
+        </a>
+
+        <script type="text/javascript">
+            const max_width = 0.75 * window.innerWidth;
+            const max_height = 0.6 * window.innerHeight;
+            const max_dimension = Math.min(max_width, max_height);
+            const qr_code = new QRCode(
+                "qr-code", {
+                width: max_dimension,
+                height: max_dimension,
+                colorDark: "#0065bd",
+                colorLight: "#ffffff"
+            });
+            qr_code.makeCode("https://home.in.tum.de/~teuj/ars/");
+        </script>
+    </main>
+
+    <footer>
+        <a href=""><i>Ars docendi</i></a>, an Audience Response System &mdash;
+        Jakob Teuber,
+        version 0.1.
+    </footer>
+
+</body>
+
+</html>
